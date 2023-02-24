@@ -1,0 +1,37 @@
+```python
+import math as m
+#算兩點距離
+x1 = eval(input('請輸入Xa座標\n'))
+y1 = eval(input('請輸入Ya座標\n'))
+
+x2 = eval(input('請輸入Xb座標\n'))
+y2 = eval(input('請輸入Yb座標\n'))
+
+c = m.sqrt(pow((x1-x2),2)+pow((y1-y2),2))
+
+cs='兩點距離為:'+str(round(c,2))
+
+print(cs,'\n')
+
+#算夾角
+
+a = m.sqrt(pow(x1,2)+pow(y1,2))
+b = m.sqrt(pow(x2,2)+pow(y2,2))
+
+a2 = x1*x2
+b2 = y1*y2
+
+ac = m.acos((a2+b2)/(a*b))
+ac = ac*180/m.pi
+print('角AOB為:'+str(round(ac,2)),'度\n')
+
+#AOB面積
+
+A = m.sqrt(pow(x1,2)+pow(y1,2))
+B = m.sqrt(pow(x2,2)+pow(y2,2))
+C = m.sqrt(pow((x1-x2),2)+pow((y1-y2),2))
+S = (A+B+C)/2
+
+AOB = m.sqrt(S*(S-A)*(S-B)*(S-C))
+print('面積為:',str(round(AOB,2)))
+```
